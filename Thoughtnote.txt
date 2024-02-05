@@ -1,3 +1,32 @@
-1
-1010001
-1101
+I made two different one for backend and another for frontend
+
+(1)frontend:
+Fistly  I create react app : my-app using command "npx create-react-app my-app  ".
+
+in my-app
+- bootstrap is used in public>index.html link of bootstrap is added
+- In App.js
+  fetchTasks,addTask,handleDelete is used
+  
+
+this is add in index.js: <App />
+
+In App.css i have add some styling for example keyframes and media query
+
+(2)Backend:
+server.js is file of backend.
+
+firstly I installed required libraries,
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-persist": "^4.0.1"
+if the data request is going in same url or not I used postman 
+
+because of storage data will be stored in JSON format in storage file.
+here some functions are including
+- addTasks
+- getTasks
+-deleteTask
+
+I used "await storage.clear();" to clear old data on server start

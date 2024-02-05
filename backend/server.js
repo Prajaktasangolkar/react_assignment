@@ -39,12 +39,12 @@ async function start() {
 
   app.post("/deleteTask", async (req, res) => {
     try {
-      const index = req.body.todos;
+      const index = req.body.index;
       const todos = (await storage.getItem("tasks")) || [];
       
       if (index >= 0 && index < todos.length) {
         todos.splice(index, 1);
-        await storage.setTodos("tasks", todos);
+        await storage.setItem("tasks", todos);
         res.json({ success: true });
       } else {
         res.status(400).json({ success: false, error: "Invalid index" });
